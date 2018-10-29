@@ -3,5 +3,5 @@
 Homebrew Formulae to Exoscale's cli binary, powered by @exoscale
 
 ```sh
-brew install exoscale/exo/exo
+brew install exoscale/tap/exo
 ```
