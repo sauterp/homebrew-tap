@@ -3,7 +3,7 @@ class ExoscaleCli < Formula
   homepage "https://exoscale.github.io/cli/"
   url "https://github.com/exoscale/cli/releases/download/v1.1.4/exoscale-cli_1.1.4_darwin_amd64.tar.gz"
   version "1.1.4"
-  sha256 "23cce0d7cb0e1aa75a5f43d106350667cc0c476fcc82418674a94bb398b17a35"
+  sha256 "4a6cc4636bd18f07cf764c3d7829a27093a07c37fdd75a400c2ad008b0bb5dbf"
 
   def install
     bin.install "exo"
