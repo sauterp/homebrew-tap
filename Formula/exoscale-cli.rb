@@ -1,9 +1,9 @@
 class ExoscaleCli < Formula
   desc "Manage (almost) everything at Exoscale from the command line."
   homepage "https://exoscale.github.io/cli/"
-  url "https://github.com/exoscale/cli/releases/download/v1.3.0/exoscale-cli_1.3.0_darwin_amd64.tar.gz"
-  version "1.3.0"
-  sha256 "89cca16d7e5d15c6a5a845bf975f879005c5ed84bea75395e04302f70706a3ce"
+  url "https://github.com/exoscale/cli/releases/download/v1.4.0/exoscale-cli_1.4.0_darwin_amd64.tar.gz"
+  version "1.4.0"
+  sha256 "59ffdf8b6bf86063db9d77f06e084846f9588396a6b0d9ecbc22bd54df1d2e8c"
 
   def install
     bin.install "exo"
