@@ -7,11 +7,11 @@ class ExoscaleCli < Formula
 
   if OS.mac?
     url "https://github.com/exoscale/cli/releases/download/v1.10.0/exoscale-cli_1.10.0_darwin_amd64.tar.gz"
-    sha256 "3b2c6246ee24a03630e605674694c264b830784fc552ad3391024dd473069987"
+    sha256 "8020428b7dbe5cc947d550d77a237082190a020021901f2f323ab2f960afd70d"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/exoscale/cli/releases/download/v1.10.0/exoscale-cli_1.10.0_linux_amd64.tar.gz"
-      sha256 "a65bc622badd3c5c0793a1ebe477b237d2f8eb9e9098fdeb0da1023365a4b22e"
+      sha256 "d8de8ae4c46870fbefc0cb93ca0d2ae8a03447b1d42cb5da7d304cb74e8b8bc9"
     end
   end
 
