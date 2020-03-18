@@ -2,16 +2,16 @@
 class ExoscaleCli < Formula
   desc "Manage (almost) everything at Exoscale from the command line."
   homepage "https://exoscale.github.io/cli/"
-  version "1.10.0"
+  version "1.11.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/exoscale/cli/releases/download/v1.10.0/exoscale-cli_1.10.0_darwin_amd64.tar.gz"
-    sha256 "8020428b7dbe5cc947d550d77a237082190a020021901f2f323ab2f960afd70d"
+    url "https://github.com/exoscale/cli/releases/download/v1.11.0/exoscale-cli_1.11.0_darwin_amd64.tar.gz"
+    sha256 "b810c6d77f6cae5e792d195cb94f1fd754c46150e7e655ca2f363b40594ae918"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/exoscale/cli/releases/download/v1.10.0/exoscale-cli_1.10.0_linux_amd64.tar.gz"
-      sha256 "d8de8ae4c46870fbefc0cb93ca0d2ae8a03447b1d42cb5da7d304cb74e8b8bc9"
+      url "https://github.com/exoscale/cli/releases/download/v1.11.0/exoscale-cli_1.11.0_linux_amd64.tar.gz"
+      sha256 "5435dc3c971520f3875749474772fec040ef2bb2d32317076e2300c23cc1571d"
     end
   end
 
