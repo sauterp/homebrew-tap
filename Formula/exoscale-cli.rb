@@ -7,19 +7,19 @@ class ExoscaleCli < Formula
 
   if OS.mac?
     url "https://github.com/exoscale/cli/releases/download/v1.14.0/exoscale-cli_1.14.0_darwin_amd64.tar.gz"
-    sha256 "c7674ee24f5c004f6f0951e62aff1c6193e817d312051eb26612e50c1641414d"
+    sha256 "6a6ce689f29b2a6af8882e1bfd8be8662635b0c4abf4b35a46f911e0ef96d0e0"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/exoscale/cli/releases/download/v1.14.0/exoscale-cli_1.14.0_linux_amd64.tar.gz"
-      sha256 "193c6447a46df861d8380e56c0cd8a52158b6826003fa43f467a58784c1b7a4d"
+      sha256 "a984dd1f80732767d11bd15eccc4571bee61a4212b3897b8a3ac0c699fd869f0"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/exoscale/cli/releases/download/v1.14.0/exoscale-cli_1.14.0_linux_arm64.tar.gz"
-        sha256 "c380bee79c91a6232b813bcc5fe37b8fdd89beaed409f5b3d855309c1d9b3675"
+        sha256 "09ce3c449727ca006ab38602cc24e5dbfcab744b7347b787895337442160ec2f"
       else
         url "https://github.com/exoscale/cli/releases/download/v1.14.0/exoscale-cli_1.14.0_linux_armv6.tar.gz"
-        sha256 "a82b4a154efea561056f5ee3ef95e7bad491cdf56cbc610ec1a8bbcb85d0fb05"
+        sha256 "19831a12ee59f4bf6f034dee41a7159167df35af45f24647b229bda9d5fcbe02"
       end
     end
   end
