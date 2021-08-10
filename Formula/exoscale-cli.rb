@@ -5,28 +5,28 @@
 class ExoscaleCli < Formula
   desc "Manage easily your Exoscale infrastructure from the command-line."
   homepage "https://exoscale.github.io/cli/"
-  version "1.39.0"
+  version "1.40.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/exoscale/cli/releases/download/v1.39.0/exoscale-cli_1.39.0_darwin_amd64.tar.gz"
-    sha256 "79e75d222607bd4268678dbb602f46d97660d7c1501974781a3a862f4384079f"
+    url "https://github.com/exoscale/cli/releases/download/v1.40.0/exoscale-cli_1.40.0_darwin_amd64.tar.gz"
+    sha256 "7a17f8e31bf153d62cfaff8e4b41880293f3c1746879296e452afe65c4832a67"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/exoscale/cli/releases/download/v1.39.0/exoscale-cli_1.39.0_darwin_arm64.tar.gz"
-    sha256 "e6274b54aa656f58ed9672d34fbb6b2a0ddb4202a87b2963eb64d4e1fbd095f6"
+    url "https://github.com/exoscale/cli/releases/download/v1.40.0/exoscale-cli_1.40.0_darwin_arm64.tar.gz"
+    sha256 "70fc76db0ad5ef59c634cb29de832c5cf4a0c10fa2920ce3d74fa5a46797d455"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/exoscale/cli/releases/download/v1.39.0/exoscale-cli_1.39.0_linux_amd64.tar.gz"
-    sha256 "98e6d9515a438ece6d08783dc97e746760ca1d3ab4f58eb69882303b9717820c"
+    url "https://github.com/exoscale/cli/releases/download/v1.40.0/exoscale-cli_1.40.0_linux_amd64.tar.gz"
+    sha256 "71e5a9d4475e12ecc892c05a94759fc6ad940a56dea85bf4df0d56691b692905"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/exoscale/cli/releases/download/v1.39.0/exoscale-cli_1.39.0_linux_armv6.tar.gz"
-    sha256 "4b1f9c3fa9aea8df1e8352450a9bc57fb307a7e0247d5eeca6c84df86c7e7f61"
+    url "https://github.com/exoscale/cli/releases/download/v1.40.0/exoscale-cli_1.40.0_linux_armv6.tar.gz"
+    sha256 "d87b1638ce37923d06e242e6815d7a62eb10a487d14f210cde509f740b0026d5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/exoscale/cli/releases/download/v1.39.0/exoscale-cli_1.39.0_linux_arm64.tar.gz"
-    sha256 "beb589e3609c25b68c24e7bdbd681bfd48fd9d63398c54929615745c7b176888"
+    url "https://github.com/exoscale/cli/releases/download/v1.40.0/exoscale-cli_1.40.0_linux_arm64.tar.gz"
+    sha256 "db29ee6e9b7825a7a7987e471aa29fcc06ca0b37ca990605ec3cf0830381180d"
   end
 
   def install
