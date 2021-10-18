@@ -5,7 +5,7 @@
 class ExoscaleCli < Formula
   desc "Manage easily your Exoscale infrastructure from the command-line."
   homepage "https://exoscale.github.io/cli/"
-  version "1.45.0"
+  version "1.45.0_1"
   bottle :unneeded
 
   on_macos do
@@ -29,7 +29,7 @@ class ExoscaleCli < Formula
   end
 
   def install
-    bin.install "exo"
+    bin.install "exoscale-cli" => "exo"
     man1.install Dir["manpage/exo*.1"]
     bash_completion.install "contrib/completion/bash/exo"
     zsh_completion.install "contrib/completion/zsh/_exo"
