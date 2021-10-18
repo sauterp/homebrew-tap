@@ -5,24 +5,27 @@
 class ExoscaleCli < Formula
   desc "Manage easily your Exoscale infrastructure from the command-line."
   homepage "https://exoscale.github.io/cli/"
-  version "1.44.0"
+  version "1.45.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/exoscale/cli/releases/download/v1.44.0/exoscale-cli_1.44.0_darwin_amd64.tar.gz"
-    sha256 "5fd005b37e49037b857fce4d15b1d30d932f09b3dff24da1b7a141045b5e26b6"
+  on_macos do
+    url "https://github.com/exoscale/cli/releases/download/v1.45.0/exoscale-cli_1.45.0_darwin_all.tar.gz"
+    sha256 "b295a570fb090a61315b333e88786dd8d85101b56ed0bf2cbc4165404578ceba"
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/exoscale/cli/releases/download/v1.44.0/exoscale-cli_1.44.0_linux_amd64.tar.gz"
-    sha256 "ba161db651e8df852d2dc0dc6afdcd3e22297509ad0e28243c639354d64635e8"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/exoscale/cli/releases/download/v1.44.0/exoscale-cli_1.44.0_linux_armv6.tar.gz"
-    sha256 "0ad064a581377a52f4b8a4784809f201c55566c01eb3913048f5f02d9453e9b9"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/exoscale/cli/releases/download/v1.44.0/exoscale-cli_1.44.0_linux_arm64.tar.gz"
-    sha256 "6d6c685eac933da14dd1fb5f3357eab321aedcf450bc07b41943ebeb8ffc3636"
+
+  on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/exoscale/cli/releases/download/v1.45.0/exoscale-cli_1.45.0_linux_armv6.tar.gz"
+      sha256 "d39774e8a1d22d4eba228ba230cac4bfd775ba6522f280a27a7e3b6ad4d92e30"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/exoscale/cli/releases/download/v1.45.0/exoscale-cli_1.45.0_linux_arm64.tar.gz"
+      sha256 "7dc7286744828c2141a3290450145025d7bc6520db1b331bff016847c0a0f66e"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/exoscale/cli/releases/download/v1.45.0/exoscale-cli_1.45.0_linux_amd64.tar.gz"
+      sha256 "0ca91cbae23947e10103ea9864c169518c3edfc0a7bc7f0b84e9f5964c4ce4d6"
+    end
   end
 
   def install
