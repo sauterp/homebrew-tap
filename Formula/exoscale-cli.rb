@@ -5,11 +5,11 @@
 class ExoscaleCli < Formula
   desc "Manage easily your Exoscale infrastructure from the command-line."
   homepage "https://exoscale.github.io/cli/"
-  version "1.59.2"
+  version "1.59.3"
 
   on_macos do
-    url "https://github.com/exoscale/cli/releases/download/v1.59.2/exoscale-cli_1.59.2_darwin_all.tar.gz"
-    sha256 "844bd10b32c9290332bcbbf1951e1071941fd0af6bebf625c575e2051564eee1"
+    url "https://github.com/exoscale/cli/releases/download/v1.59.3/exoscale-cli_1.59.3_darwin_all.tar.gz"
+    sha256 "c65f32b5aced7d55d460d5a64806c6ba3016c23808cabc06a9732ac24f98bdec"
 
     def install
       bin.install "exoscale-cli" => "exo"
@@ -21,19 +21,8 @@ class ExoscaleCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/exoscale/cli/releases/download/v1.59.2/exoscale-cli_1.59.2_linux_armv6.tar.gz"
-      sha256 "c4c0142639052a48ae9f5e7cd15afa47c0b4706abb49381142a8beed48b28fca"
-
-      def install
-        bin.install "exoscale-cli" => "exo"
-        man1.install Dir["manpage/exo*.1"]
-        bash_completion.install "contrib/completion/bash/exo"
-        zsh_completion.install "contrib/completion/zsh/_exo"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/exoscale/cli/releases/download/v1.59.2/exoscale-cli_1.59.2_linux_amd64.tar.gz"
-      sha256 "cfbfd9590403367ae7e204c529fa3b8ce0d088a88d89d311ef1c012c4e3dfcf3"
+      url "https://github.com/exoscale/cli/releases/download/v1.59.3/exoscale-cli_1.59.3_linux_armv6.tar.gz"
+      sha256 "acfe50eb2e23b9647af8a3f234392b82a5f07e2b39843ea0588f57a6887de291"
 
       def install
         bin.install "exoscale-cli" => "exo"
@@ -43,8 +32,19 @@ class ExoscaleCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/exoscale/cli/releases/download/v1.59.2/exoscale-cli_1.59.2_linux_arm64.tar.gz"
-      sha256 "c4b02d2c1e12592c6a9584a6e39ec382de5df27ad3ad1cfbb6d9af24243774af"
+      url "https://github.com/exoscale/cli/releases/download/v1.59.3/exoscale-cli_1.59.3_linux_arm64.tar.gz"
+      sha256 "72d1fb3da5345e5b4c487c4e786da3ad034a08b7f158c200126edbf1b99dd2cb"
+
+      def install
+        bin.install "exoscale-cli" => "exo"
+        man1.install Dir["manpage/exo*.1"]
+        bash_completion.install "contrib/completion/bash/exo"
+        zsh_completion.install "contrib/completion/zsh/_exo"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/exoscale/cli/releases/download/v1.59.3/exoscale-cli_1.59.3_linux_amd64.tar.gz"
+      sha256 "cac5ed80d16f7d8ade920686b077b0a9d0d6bd9ffafb430456f88a79b4447b1a"
 
       def install
         bin.install "exoscale-cli" => "exo"
