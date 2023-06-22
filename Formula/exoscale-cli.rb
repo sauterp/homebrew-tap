@@ -5,11 +5,11 @@
 class ExoscaleCli < Formula
   desc "Manage easily your Exoscale infrastructure from the command-line."
   homepage "https://exoscale.github.io/cli/"
-  version "1.70.143"
+  version "1.70.144"
 
   on_macos do
-    url "https://github.com/sauterp/cli/releases/download/v1.70.143/exoscale-cli_1.70.143_darwin_all.tar.gz"
-    sha256 "ff7cc6abf8c43a4771b21c8f6e4ddfc0760ecd0690074070f45305d4528866ca"
+    url "https://github.com/sauterp/cli/releases/download/v1.70.144/exoscale-cli_1.70.144_darwin_all.tar.gz"
+    sha256 "71f29d6677c6c88e48f59ab6193219db5df26be94e8e263ac435fb08258a51d3"
 
     def install
       bin.install "exo"
@@ -21,8 +21,8 @@ class ExoscaleCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sauterp/cli/releases/download/v1.70.143/exoscale-cli_1.70.143_linux_armv6.tar.gz"
-      sha256 "826b4ab59829b4e245adc180b66c3b3288b0f286f49f82b188a05ebac67a5bb3"
+      url "https://github.com/sauterp/cli/releases/download/v1.70.144/exoscale-cli_1.70.144_linux_armv6.tar.gz"
+      sha256 "30babc333a626fab2d037f78d9838c2b828a53c89c433b86806e4731b6429d54"
 
       def install
         bin.install "exo"
@@ -32,8 +32,8 @@ class ExoscaleCli < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sauterp/cli/releases/download/v1.70.143/exoscale-cli_1.70.143_linux_arm64.tar.gz"
-      sha256 "5a421d5c28f258b2606f0b10abb6804f28de66725feae3086a6a96e6bab0c572"
+      url "https://github.com/sauterp/cli/releases/download/v1.70.144/exoscale-cli_1.70.144_linux_arm64.tar.gz"
+      sha256 "bd2801abfe1cf8adfe3dbbb504bf7d6cb2e282c872d7f32774791ed5d313a6cd"
 
       def install
         bin.install "exo"
@@ -43,8 +43,8 @@ class ExoscaleCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sauterp/cli/releases/download/v1.70.143/exoscale-cli_1.70.143_linux_amd64.tar.gz"
-      sha256 "5b26e54e258535b89b9bed8bf130613895c81c49bc10191297b67e8634cec321"
+      url "https://github.com/sauterp/cli/releases/download/v1.70.144/exoscale-cli_1.70.144_linux_amd64.tar.gz"
+      sha256 "e3846bc47321a05b2b59dbf674a6c662eadb25e39ccb83c77bf8f57e0e9386cd"
 
       def install
         bin.install "exo"
